@@ -1,8 +1,6 @@
-html {
+* {
     margin: 0;
     padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
 }
 body{
     height: 100vh;
@@ -11,12 +9,12 @@ body{
 
 .main-section {
     display: flex;
-    height: 100%;
 }
 
 .article {
     flex: 1;
     padding: 20px;
+    height: 80vh;
 }
 
 #article1 {
@@ -24,11 +22,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid #000000;
 }
 
 #article2 {
     background-color: #e0e0e0;
     text-align: left;
+    border: 1px solid #000000;
 }
 
 button {
