@@ -1,0 +1,50 @@
+<div class="container">
+  <h1>Register User</h1>
+  <hr />
+
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    <div class="full-name">
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Full name"
+        ngModel
+        required
+      />
+    </div>
+
+    <div class="email">
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Email"
+        ngModel
+        required
+      />
+    </div>
+
+    <div class="age">
+      <input
+        type="number"
+        name="age"
+        id="age"
+        placeholder="Age"
+        ngModel
+        required
+      />
+    </div>
+
+    <div class="submit-btn">
+      <button>Save</button>
+    </div>
+  </form>
+
+  <div *ngIf="submitted">
+    <h3>{{message}}</h3>
+    <p><strong>Name:</strong> {{ userData.name }}</p>
+    <p><strong>Email:</strong> {{ userData.email }}</p>
+    <p><strong>Age:</strong> {{ userData.age }}</p>
+  </div>
+</div>
